@@ -9,7 +9,7 @@ public class TugasKafe17 {
 
         System.out.println("=== DAFTAR MENU KAFE KAMPUS ===");
         for (int i = 0; i < menu.length; i++) {
-            System.out.printf("%d. %-16s : Rp %,d%n", (i + 1), menu[i], harga[i]);
+            System.out.println((i + 1) + ". " + menu[i] + " : Rp " + harga[i]);
         }
         System.out.println("================================");
 
@@ -40,7 +40,7 @@ public class TugasKafe17 {
 
         System.out.print("\nMasukkan jumlah item yang ingin dipesan: ");
         int jmlItem = input.nextInt();
-        input.nextLine(); 
+        input.nextLine();
 
         String[] daftarPesanan = new String[jmlItem];
         int[] hargaPesanan = new int[jmlItem];
@@ -64,16 +64,16 @@ public class TugasKafe17 {
                 totalBiaya += harga[indeksMenu];
             } else {
                 System.out.println("Menu \"" + inputMenu + "\" tidak tersedia! Silakan masukkan ulang.");
-                i--; 
+                i--;
             }
         }
 
         System.out.println("\n========== STRUK PEMESANAN ==========");
         for (int i = 0; i < daftarPesanan.length; i++) {
-            System.out.printf("%d. %-16s : Rp %,d%n", (i + 1), daftarPesanan[i], hargaPesanan[i]);
+            System.out.println((i + 1) + ". " + daftarPesanan[i] + " : Rp " + hargaPesanan[i]);
         }
-        System.out.println("-------------------------------------");
-        System.out.printf("Total Biaya         : Rp %,d%n", totalBiaya);
+        System.out.println("Total Biaya : Rp " + totalBiaya);
+        System.out.println("=====================================");
 
         input.close();
     }
